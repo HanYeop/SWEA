@@ -9,7 +9,6 @@ public class Solution {
 	static int e; // 간선의 총 수
 	static int[][] graph; // 관계 그래프
 	static int[] visit; // 방문 그래프
-	static int[] degree; // 차수 그래프
 	
     public static void main(String[] args) throws IOException{
     	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,23 +20,19 @@ public class Solution {
     		e = Integer.parseInt(st.nextToken());
     		graph = new int[v+1][v+1];
     		visit = new int[v+1];
-    		degree = new int[v+1];
-    				
     		st = new StringTokenizer(br.readLine());
     		
     		// 그래프 반대로 연결
     		for(int i = 0; i < e; i++) {
     			int x = Integer.parseInt(st.nextToken());
         		int y = Integer.parseInt(st.nextToken());
-        		
-        		degree[x]++;
     			graph[y][x] = 1;
     		}
     		
     		System.out.print("#" + t + " ");
-    		// 반대지점에서 출발 (차수가 0인 것)
+    		
     		for(int i = 1; i <= v; i++) {
-    			if(degree[i] == 0) {
+    			if(visit[i] == 0) {
     				dfs(i);
     			}
     		}
