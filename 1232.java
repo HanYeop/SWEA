@@ -98,11 +98,11 @@ public class Solution {
 	
  public static void main(String[] args) throws IOException{
  	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
- 	tree = new Tree();
  	
  	for(int t = 1; t <= 10; t++) {
- 		n = Integer.parseInt(br.readLine());
- 		
+ 		n = Integer.parseInt(br.readLine()); 	
+		tree = new Tree();
+		
  		for(int i = 1; i <= n; i++) {
  			StringTokenizer st = new StringTokenizer(br.readLine());
  			st.nextToken();
@@ -111,7 +111,6 @@ public class Solution {
  			int rightIndex = 0;
  			
  			if (st.countTokens() == 2) {
- 				
  				leftIndex = Integer.parseInt(st.nextToken());
  				rightIndex = Integer.parseInt(st.nextToken());
  			}
