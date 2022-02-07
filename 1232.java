@@ -120,5 +120,5 @@ public class Solution {
  		
  		System.out.println("#" + t + " " + (int)tree.inOrder(tree.root));
  	}
- }
+  }
 }
