@@ -54,7 +54,12 @@ class Tree{
 	}
 	
 	// 중위 순회 (왼쪽 자식, 루트, 오른쪽 자식)
-	public void inOrder(Node root) {		
+	public void inOrder(Node root) {
+		// 계산 불가 발견 시 남은 계산 중지
+		if(result == 0) {
+			return;
+		}
+		
 		// left 결정 (마지막 레벨에 있는 숫자부터 연산)
 		if(root.leftNode.leftNode == null) {
 			// 피연산자 자리에 연산자가 있을 경우
