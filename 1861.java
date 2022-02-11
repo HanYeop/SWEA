@@ -34,9 +34,7 @@ public class Solution {
              
             for(int i = 1; i <= n; i++) {
                 for(int j = 1; j <= n; j++) {
-                    if(arr[i][j] != 0) {
-                        dfs(i,j,1,arr[i][j]);
-                    }
+                    dfs(i,j,1,arr[i][j]);
                 }
             }           
             max = 0;
