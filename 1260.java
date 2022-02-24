@@ -14,10 +14,6 @@ class Pair{
 		this.row = row;
 		this.col = col;
 	}
-	
-	public int area(){
-		return row * col;
-	}
 }
 public class Solution{
 	static StringTokenizer st;
